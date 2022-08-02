@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetMySecret</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="imgs/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="imgs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="imgs/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/front-end/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img class="logotipo" src="/front-end/imgs/GetMySecretLogo.png" alt="" />
+
+      <textarea
+        class="textField"
+        name="textfield"
+        id="textSecret"
+        cols="30"
+        rows="10"
+        placeholder="Digite seu segredo...."
+      ></textarea>
+      <div class="container-tempo">
+        <label for="informa-tempo">Tempo de vida do segredo: </label>
+        <select name="tempo" id="lifeTime">
+          <option value="00:00:03:00">3 Minutos</option>
+          <option value="00:00:05:00">5 Minutos</option>
+          <option value="00:00:30:00">30 Minutos</option>
+          <option value="00:01:00:00">1 Hora</option>
+          <option value="00:03:00:00">3 Horas</option>
+          <option value="00:12:00:00">12 Horas</option>
+          <option value="01:00:00:00">1 Dia</option>
+          <option value="03:00:00:00">3 Dias</option>
+        </select>
+        <input type="radio" name="tipo-segredo" id="senha" checked="checked" />
+        <label for="minutos">Senha</label>
+        <input type="radio" name="tipo-segredo" id="texto" />
+        <label for="horas">Texto</label>
+      </div>
+      <div class="container-buttons">
+        <button onclick="create_secret()">Testes</button>
+      </div>
+    </div>
+    <footer>
+      <p class="footer-text">
+        Developed by
+        <a href="https://www.linkedin.com/in/ayrtonmarinho/">Ayrton Marinho </a
+        >| Source Project on <a href="http://">GITHUB</a>
+      </p>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="js/gmsPost.js"></script>
+  </body>
+</html>
