@@ -15,7 +15,7 @@ function fetchDeleteSecret(token) {
     ).then(resp => {
         goBack();
     }).
-        catch(error => {
+        catch(err => {
             window.alert("Segredo não existe!");
         })
 }

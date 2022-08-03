@@ -18,12 +18,14 @@ function fetchGetSecret(token) {
         }
     ).then(response => response.json())
         .then(code => {
+            if (code.statusCode == 404) {
+                window.alert("Não encontrado");
+                displayDefault();
+                return 0;
+            }
             displaySecretContent();
             setText(code.body, code.lifetime);
 
-        }).
-        catch(error => {
-            window.alert("Segredo não existe!")
         })
 }
 
