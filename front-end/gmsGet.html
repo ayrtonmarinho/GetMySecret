@@ -26,7 +26,15 @@
     <link rel="stylesheet" href="/front-end/css/style.css" />
     <link
       rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"
     />
   </head>
   <body>
@@ -34,42 +42,40 @@
       <img class="logotipo" src="/front-end/imgs/GetMySecretLogo.png" alt="" />
 
       <textarea
-        class="textField"
+        class="textField-token"
         name="textfield"
         id="textSecret"
         cols="30"
         rows="10"
-        placeholder="Digite seu segredo...."
+        placeholder="Digite o Token"
       ></textarea>
-      <div class="container-tempo">
-        <label for="informa-tempo">Tempo de vida do segredo: </label>
-        <select name="tempo" id="lifeTime">
-          <option value="00:00:03:00">3 Minutos</option>
-          <option value="00:00:05:00">5 Minutos</option>
-          <option value="00:00:30:00">30 Minutos</option>
-          <option value="00:01:00:00">1 Hora</option>
-          <option value="00:03:00:00">3 Horas</option>
-          <option value="00:12:00:00">12 Horas</option>
-          <option value="01:00:00:00">1 Dia</option>
-          <option value="03:00:00:00">3 Dias</option>
-        </select>
-        <input type="radio" name="tipo-segredo" id="senha" checked="checked" />
-        <label for="minutos">Senha</label>
-        <input type="radio" name="tipo-segredo" id="texto" />
-        <label for="horas">Texto</label>
+      <div id="secretContent">
+        <h3>Seu Segredo:</h3>
+        <p id="secret"></p>
+        <p id="lifetime"></p>
       </div>
-      <div class="container-buttons">
-        <button onclick="create_secret()">Testes</button>
+      <div class="container-buttons" id="secretButtons" style="display: none">
+        <button id="delete" onclick="_()">Destruir Segredo</button>
+        <button id="back" onclick="displayDefault()">Retornar</button>
+      </div>
+      <div class="container-buttons" id="revealButtons">
+        <button id="revelarSegredo" onclick="getSecret()">
+          Revelar Segredo
+        </button>
+        <button id="home" onclick="goHome()">Inicio</button>
       </div>
     </div>
     <footer>
       <p class="footer-text">
         Developed by
         <a href="https://www.linkedin.com/in/ayrtonmarinho/">Ayrton Marinho </a
-        >| Source Project on <a href="http://">GITHUB</a>
+        >| Source Project on
+        <a href="https://github.com/ayrtonmarinho/getmysecret" target="_blank"
+          >GITHUB</a
+        >
       </p>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <script src="js/gmsPost.js"></script>
+    <script src="js/gmsGet.js"></script>
   </body>
 </html>

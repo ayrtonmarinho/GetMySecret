@@ -47,7 +47,8 @@
         id="textSecret"
         cols="30"
         rows="10"
-        placeholder="Digite seu segredo...."
+        maxlength="500"
+        placeholder="Digite seu segredo..."
       ></textarea>
       <div class="container-tempo">
         <label for="informa-tempo">Tempo de vida do segredo: </label>
@@ -67,14 +68,26 @@
         <label for="horas">Texto</label>
       </div>
       <div class="container-buttons">
-        <button onclick="create_secret()">Testes</button>
+        <button onclick="create_secret()">Guardar Segredo</button>
+      </div>
+      <div class="info">
+        <p>
+          *Senhas devem ter pelo menos:<br />
+          1 Letra Minúscula, 1 Letra Maiúscula, 1 Número, 1 Caracterer Especial,
+          Sem espaços, 8 a 16 characteres.<br />
+          **Textos o máximo de caracteres é 500.
+        </p>
       </div>
     </div>
+
     <footer>
       <p class="footer-text">
         Developed by
         <a href="https://www.linkedin.com/in/ayrtonmarinho/">Ayrton Marinho </a
-        >| Source Project on <a href="http://">GITHUB</a>
+        >| Source Project on
+        <a href="https://github.com/ayrtonmarinho/getmysecret" target="_blank"
+          >GITHUB</a
+        >
       </p>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>

@@ -65,10 +65,6 @@ function resetFields() {
 }
 
 
-
-
-
-
 // Função para validar senha com uso de RegEx
 function checkPassword(value) {
     let message = [];
