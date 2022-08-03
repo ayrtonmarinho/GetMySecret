@@ -1,7 +1,7 @@
 
 
 body{
-    background-color: rgb(151, 144, 144);
+    background-color: rgb(69, 69, 69);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -177,7 +177,7 @@ body{
 }
 
 #home{
-    background-color: #faae21; /* Green */
+    background-color: #fa6d21; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -188,14 +188,15 @@ body{
     width: 500px;
     border-radius: 3px;
     margin-bottom: 5px;
+    margin-top: 7px;
 }
 
 #home:hover{
-    background-color: #cd962f;
+    background-color: #c05922;
 }
 
 #home:active{
-    background-color: #cd962f;
+    background-color: #c05922;
     transform: translateY(4px);
     border-radius: 3px;
 }

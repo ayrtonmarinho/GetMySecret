@@ -1,5 +1,5 @@
 const urlHome = "index.html"; //Caminho para a pagina inicial
-api_link = "https://4uie9wfst8.execute-api.sa-east-1.amazonaws.com/getSecret"
+api_link = "https://4uie9wfst8.execute-api.sa-east-1.amazonaws.com/getSecret";
 
 function goHome() {
     window.location = urlHome;

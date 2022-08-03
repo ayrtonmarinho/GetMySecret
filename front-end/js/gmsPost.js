@@ -1,9 +1,12 @@
 
 var closable = alertify.alert().setting({ 'closable': false });
-var api_link = "https://87amlzz1s2.execute-api.sa-east-1.amazonaws.com/createSecret/"
+var api_link = "https://87amlzz1s2.execute-api.sa-east-1.amazonaws.com/createSecret/";
+const urlHome = "index.html"; //Caminho para a pagina inicial
 
 
-
+function goHome() {
+    window.location = urlHome;
+}
 
 function newSecret(secret, lifetime) { //Função Fetch envia os dados via API e recebe uma response com o token referente ao segredo
     console.log("Fetch")
