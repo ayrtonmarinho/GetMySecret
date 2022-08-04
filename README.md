@@ -19,3 +19,17 @@ Na tela de criação e um novo segredo você pode escolher se quer gerar uma sen
 Após escolher o tipo de segredo você pode escolher o tempo de vida dele. Esse tempo irá definir o quanto este segredo estará disponivel para ser recuperado. Em seguinda o você pode apertar o botão para guardar o segredo e um alerta com o token e o tempo de vida será mostrado:
 
 ![gms002-2](https://user-images.githubusercontent.com/76691413/182851454-dc0384dc-6f3d-4857-8432-03ab5f2cfa26.png)
+
+Na tela de revelar segredo você deve digitar o token do segredo para recupera-lo. Se ele existir será exibido para você, assim como a opção para deleta-lo se preferir:
+
+![gms003](https://user-images.githubusercontent.com/76691413/182851963-36d827ff-3699-404b-882c-a65cf69a22ea.png)
+
+O token deve ser as especificações de 36 caracteres, incluindo os hífens. Se você digitar um token referente a o segredo existente verá ele na tela:
+
+![gms003-4](https://user-images.githubusercontent.com/76691413/182852516-49ae36a2-e57d-49c5-b09d-019f273b2147.png)
+
+Se decidir destruir o segredo um alerta em prompt é exibido e você deve digitar o token do segredo:
+
+![gms004](https://user-images.githubusercontent.com/76691413/182852864-7407e6e5-ae15-4e00-a56c-f983aadda56c.png)
+
+Se o token não existir uma mensagem será mostrada falando do erro. Se ele existir, ele deletará o segredo e irá para tela inicial.
