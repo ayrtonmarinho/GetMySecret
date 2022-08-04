@@ -33,3 +33,20 @@ Se decidir destruir o segredo um alerta em prompt é exibido e você deve digita
 ![gms004](https://user-images.githubusercontent.com/76691413/182852864-7407e6e5-ae15-4e00-a56c-f983aadda56c.png)
 
 Se o token não existir uma mensagem será mostrada falando do erro. Se ele existir, ele deletará o segredo e irá para tela inicial.
+
+### Implantando o projeto:
+
+Primeiramente o GetMySecret é uma aplicação que usa arquitetura serverless e microsserviços. Para tal você precisará de uma conta AWS se não possuir pode conseguir aqui. Caso já possua siga os passos a seguir:
+
+1. Clone o projeto para seu local
+1. Vá até o recurso AWS Lambda e crie funções com os respectivos nomes existentes na pasta back-end. Você pode modificar os nomes. Em seguida carregue os zips das funções lambdas respectivas. Os zips estão na pasta zips. É importante ter uma função para cada zip. Você também precisará configurar uma variável de ambiente para sua região, caso contrário estará sujeito ao fuso horário  padrão do AWS e isso pode não corresponder a o da sua região. Você pode checar informações de permissão lambda nos arquivos .yml presentes em cada pagina contida no back-end.
+1. No recurso AWS API Gateway configure os métodos post, get, delete para cada uma das funções lambda e associe cada uma também. Lembre-se de ativar o CORS. Se tiver dúvida veja a documentação do AWS sobre esse recurso. Endereço de api será utilizado nas funções de fetch de cada .js da pasta front end. Implante os métodos.
+1. Altere o endereço de cada *api_link* nos .js dentro da pasta front-end/js polo endereço criados no API Gateway, será necessário para que funcione corretamente.
+1. Crie uma tabela no DynamoBD, o banco noSQL da AWS, configure a partition key dando o nome de *secret_id*, partition key é como a primary key do SQL.
+1. Usando o recurso AWS S3 crie um bucket S3 e inclua nele o conteúdo da pasta front-end (com os .js ja modificados para os api_link) e determine em propriedades que ele seja um *static site*, configure as permissões necessárias.
+1. Configure um evento usando o recurso AWS Event Bridge para executar a função lambda AutoDelete, esta é a única função que não deve possuir ligação com api. Configure para ocorrer a chamada da função a cada 1 minuto. Se você não souber como configurar o Event Bridge pode procurar na documentação ou vídeo tutoriais na internet. Não é difícil.
+
+Se tudo estiver ok, você conseguirá utilizar a aplicação a partir de sua implantação.
+
+*OBS: AWS possui um free-tier de uso para novos usuários com uma cota mensal de gastos, o Event Bridge pode consumir muito recurso por fazer a chamada de função a cada 1 minuto. Então você pode ativá-lo apenas quando for testar a sua implantação.*
+
