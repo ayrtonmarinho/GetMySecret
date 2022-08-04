@@ -17,6 +17,11 @@
 
 Experimente o GetMySecret clicando <a href="http://gmsmistiko.s3-website-sa-east-1.amazonaws.com/index.html" target="_blank">aqui.</a>
 
+### Topologia Microsserviços/Serverless:
+
+![modelo_microsserviços](https://user-images.githubusercontent.com/76691413/182872814-55511cf4-7991-4125-a836-70a61b359947.png)
+
+
 #### Instruções de Uso:
 Na tela inicial você pode escolher entre criar um novo segredo ou revelar um segredo existente que você possua o token:
 
