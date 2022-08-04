@@ -46,7 +46,7 @@ Se o token não existir uma mensagem será mostrada falando do erro. Se ele exis
 
 ### Implantando o projeto:
 
-Primeiramente o GetMySecret é uma aplicação que usa arquitetura serverless e microsserviços. Para tal você precisará de uma conta AWS se não possuir pode conseguir aqui. Caso já possua siga os passos a seguir:
+Primeiramente o GetMySecret é uma aplicação que usa arquitetura serverless e microsserviços. Para tal você precisará de uma conta AWS se não possuir pode conseguir [aqui](https://aws.amazon.com/pt/). Caso já possua siga os passos a seguir:
 
 1. Clone o projeto para seu local
 1. Vá até o recurso AWS Lambda e crie funções com os respectivos nomes existentes na pasta back-end. Você pode modificar os nomes. Em seguida carregue os zips das funções lambdas respectivas. Os zips estão na pasta zips. É importante ter uma função para cada zip. Você também precisará configurar uma variável de ambiente para sua região, caso contrário estará sujeito ao fuso horário  padrão do AWS e isso pode não corresponder a o da sua região. Você pode checar informações de permissão lambda nos arquivos .yml presentes em cada pagina contida no back-end.
