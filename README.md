@@ -19,8 +19,7 @@ Experimente o GetMySecret clicando <a href="http://gmsmistiko.s3-website-sa-east
 
 ### Topologia Microsserviços/Serverless:
 
-![modelo_microsserviços](https://user-images.githubusercontent.com/76691413/182872814-55511cf4-7991-4125-a836-70a61b359947.png)
-
+![Topologia](https://user-images.githubusercontent.com/76691413/182895855-1e59da53-09ce-48bf-a487-f253685a0e96.png)
 
 
 #### Instruções de Uso:
