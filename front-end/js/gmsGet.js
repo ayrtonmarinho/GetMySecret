@@ -71,7 +71,13 @@ function setText(secret, lifetime) {
 function check_token_length(value) {
     let token_size = /^.{36}$/;
     if (!token_size.test(value)) {
-        window.alert("Os tokens devem possuir 36 characteres incluindo hifens!");
+        alertify.alert()
+            .setting({
+                'label': 'Ok',
+                'message': "Os tokens devem possuir 36 characteres incluindo hifens!",
+                'onok': function () { console.log(0) },
+                'title': 'Aviso'
+            }).show();
         return true;
     }
     return false;

@@ -103,9 +103,15 @@ function checkPassword(value) {
     }
 
     if (!message.length == 0) {                              //Se o array message possuir tamanho maior que zero significa que houve algum requisito não sanado
-        let warningMessage = message.toString().replaceAll(',', '\n');
-        window.alert(warningMessage)
-        console.log(warningMessage)
+        let warningMessage = message.toString();
+        //Alerta do framework alertFy.
+        alertify.alert()
+            .setting({
+                'label': 'Ok',
+                'message': warningMessage,
+                'onok': function () { console.log(0) },
+                'title': 'Aviso'
+            }).show();
         return false;
 
     }
